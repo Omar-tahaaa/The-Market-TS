@@ -1,0 +1,53 @@
+[
+  {
+    "label": "First Name",
+    "type": "text",
+    "name": "firstName",
+    "pattern": "^[a-zA-Z]{2,30}$",
+    "id": "886b"
+  },
+  {
+    "label": "Last Name",
+    "type": "text",
+    "name": "lastName",
+    "pattern": "^[a-zA-Z]{2,30}$",
+    "id": "6426"
+  },
+  {
+    "label": "Email",
+    "type": "email",
+    "name": "email",
+    "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+    "id": "6abe"
+  },
+  {
+    "label": "Password",
+    "type": "password",
+    "name": "password",
+    "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$",
+    "id": "9397"
+  },
+  {
+    "label": "Confirm Password",
+    "type": "password",
+    "name": "confirmPassword",
+    "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$",
+    "id": "ce31"
+  },
+  {
+    "label": "Sex",
+    "type": "select",
+    "name": "sex",
+    "id": "cb32",
+    "options": [
+      { "label": "Male", "value": "male" },
+      { "label": "Female", "value": "female" }
+    ]
+  },
+  {
+    "label": "I agree to the Terms and Conditions",
+    "type": "checkbox",
+    "name": "terms",
+    "id": "terms1"
+  }
+]

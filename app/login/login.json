@@ -1,0 +1,16 @@
+[
+  {
+    "label": "Email",
+    "type": "email",
+    "name": "email",
+    "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+    "id": "76ce"
+  },
+  {
+    "label": "Password",
+    "type": "password",
+    "name": "password",
+    "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$",
+    "id": "0650"
+  }
+]
