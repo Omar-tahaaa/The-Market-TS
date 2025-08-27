@@ -33,7 +33,7 @@ const signUpSchema = z
     sex: z
       .string()
       .min(1, { message: "Sex is required" })
-      .refine((v) => ["male", "female", "other"].includes(v), {
+      .refine((v) => ["male", "female"].includes(v), {
         message: "Invalid selection",
       }),
     terms: z
