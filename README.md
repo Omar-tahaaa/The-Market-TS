@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Market TS
 
-## Getting Started
+A modern, responsive e-commerce application built with Next.js 16 (App Router), TypeScript, and Material UI. This project demonstrates a scalable architecture using Redux Toolkit for state management and MongoDB for user authentication.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **User Authentication**: Secure Login and Registration system using JWT (via generic backend/Next.js API routes) and MongoDB.
+- **Protected Routes**: Middleware/Component-level protection for authenticated-only pages.
+- **Product Browsing**: Dynamic product fetching from external API (DummyJSON).
+- **Category Filtering**: Real-time filtering of products by category.
+- **Responsive Design**: Mobile-first UI built with Material UI, featuring a responsive Navbar and Grid layout.
+- **State Management**: Centralized state using Redux Toolkit (Users, Products, Categories).
+- **Form Handling**: Robust form validation using React Hook Form and Zod.
+- **Notifications**: User feedback using React Toastify.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **UI Library**: [Material UI (MUI)](https://mui.com/)
+- **State Management**: [Redux Toolkit](https://redux-toolkit.js.org/)
+- **Database**: [MongoDB](https://www.mongodb.com/) (with Mongoose)
+- **Form Validation**: [Zod](https://zod.dev/) + [React Hook Form](https://react-hook-form.com/)
+- **HTTP Client**: [Axios](https://axios-http.com/)
+
+## 📦 Getting Started
+
+### Prerequisites
+
+- Node.js (v18+ recommended)
+- MongoDB Atlas account (or local MongoDB)
+
+## 📂 Project Structure
+
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+the-market-ts/
+├── app/                    # Next.js App Router Pages & API
+│   ├── api/                # Backend API Routes (Users, etc.)
+│   ├── login/              # Login Page
+│   ├── products/           # Protected Products Page
+│   ├── register/           # Registration Page
+│   ├── slices/             # Redux Slices (State Logic)
+│   └── store/              # Redux Store Configuration
+├── components/             # Reusable React Components (UI, Forms)
+├── lib/                    # Library configurations (MongoDB connection)
+├── models/                 # Mongoose Data Models
+├── utils/                  # Utility functions & key constants
+└── validations/            # Zod schemas for form validation
+```
