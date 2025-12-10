@@ -27,13 +27,6 @@ A modern, responsive e-commerce application built with Next.js 16 (App Router), 
 - **Form Validation**: [Zod](https://zod.dev/) + [React Hook Form](https://react-hook-form.com/)
 - **HTTP Client**: [Axios](https://axios-http.com/)
 
-## 📦 Getting Started
-
-### Prerequisites
-
-- Node.js (v18+ recommended)
-- MongoDB Atlas account (or local MongoDB)
-
 ## 📂 Project Structure
 
 ```
