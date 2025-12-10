@@ -1,10 +1,16 @@
-import { JSON_URL } from "@/utils/api";
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store/store";
+import axios from "axios";
 
 export interface User {
+  id?: string;
+  _id?: string;
+  firstName?: string;
+  lastName?: string;
   email: string;
   password: string;
+  gender?: string;
+  terms?: boolean;
 }
 
 export interface UserState {
@@ -23,8 +29,7 @@ export const fetchUsers = createAsyncThunk(
   "usersSlice/fetchUsers",
   async () => {
     try {
-      const res = await fetch(`${JSON_URL}/users`);
-      const data = await res.json();
+      const { data } = await axios.get("/api/users");
       return data;
     } catch (error) {
       throw new Error("Failed to fetch users");

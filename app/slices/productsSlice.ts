@@ -1,13 +1,13 @@
 import { BASE_URL } from "@/utils/api";
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store/store";
+import axios from "axios";
 
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
   async (limit: number, { rejectWithValue }) => {
     try {
-      const res = await fetch(`${BASE_URL}/products?limit=${limit}`);
-      const data = await res.json();
+      const { data } = await axios(`${BASE_URL}/products?limit=${limit}`);
       return data.products;
     } catch (error) {
       throw new Error("Failed to fetch products");

@@ -3,13 +3,13 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { RootState } from "../store/store";
+import axios from "axios";
 
 export const fetchCategoryList = createAsyncThunk(
   "categoryList/fetchCategoryList",
   async (_, { rejectWithValue }) => {
     try {
-      const res = await fetch(`${BASE_URL}/products/category-list`);
-      const data = await res.json();
+      const { data } = await axios(`${BASE_URL}/products/category-list`);
       return data;
     } catch (error) {
       throw new Error("Failed to fetch category list");

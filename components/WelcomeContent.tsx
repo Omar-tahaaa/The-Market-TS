@@ -25,6 +25,7 @@ export default function WelcomeContent() {
           mb: 3,
           textShadow: "0 2px 8px rgba(0,0,0,0.15)",
           textAlign: "center",
+          fontSize: { xs: "2rem", md: "3.75rem" },
         }}
       >
         Welcome To Market

@@ -7,7 +7,7 @@ export default function HomePage() {
     <Box
       sx={{
         position: "relative",
-        minHeight: "92.2vh",
+        minHeight: "calc(100vh - 64px)",
         width: "100%",
         overflow: "hidden",
         display: "flex",

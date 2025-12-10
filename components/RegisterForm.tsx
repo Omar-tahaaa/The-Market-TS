@@ -18,10 +18,9 @@ import {
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { JSON_URL } from "@/utils/api";
-
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 const RegistrationForm = () => {
   const router = useRouter();
@@ -58,16 +57,8 @@ const RegistrationForm = () => {
       return;
     }
     try {
-      const response = await fetch(`${JSON_URL}/users`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      const result = await response.json();
-      dispatch(setNewUsers(result));
+      const { data: userData } = await axios.post("/api/users", data);
+      dispatch(setNewUsers(userData));
       setEmailExists(false);
       reset();
 

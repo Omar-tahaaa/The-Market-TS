@@ -30,9 +30,9 @@ const signUpSchema = z
       .regex(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/, {
         message: "Confirm password must match password requirements",
       }),
-    sex: z
+    gender: z
       .string()
-      .min(1, { message: "Sex is required" })
+      .min(1, { message: "Gender is required" })
       .refine((v) => ["male", "female"].includes(v), {
         message: "Invalid selection",
       }),

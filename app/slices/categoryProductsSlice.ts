@@ -2,6 +2,7 @@ import { BASE_URL } from "@/utils/api";
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Product } from "./productsSlice";
 import { RootState } from "../store/store";
+import axios from "axios";
 
 export interface ProductsState {
   categoryProducts: Product[];
@@ -17,9 +18,7 @@ export const fetchCategoryProducts = createAsyncThunk(
   "categoryProducts/fetchCategoryProducts",
   async (category: string, { rejectWithValue }) => {
     try {
-      const res = await fetch(`${BASE_URL}/products/category/${category}`);
-
-      const data = await res.json();
+      const { data } = await axios(`${BASE_URL}/products/category/${category}`);
       return data.products;
     } catch (error) {
       throw new Error("Failed to fetch cateogry products");

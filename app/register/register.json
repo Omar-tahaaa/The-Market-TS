@@ -35,9 +35,9 @@
     "id": "ce31"
   },
   {
-    "label": "Sex",
+    "label": "Gender",
     "type": "select",
-    "name": "sex",
+    "name": "gender",
     "id": "cb32",
     "options": [
       { "label": "Male", "value": "male" },

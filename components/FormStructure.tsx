@@ -10,20 +10,20 @@ const FormStructure: React.FC<FormStructureProps> = ({ type, children }) => {
   return (
     <Box
       sx={{
-        minHeight: "90vh",
+        minHeight: "calc(100vh - 64px)",
         bgcolor: "#f5f6fa",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        px: 2,
       }}
     >
       <Paper
         elevation={6}
         sx={{
           p: 4,
-          minWidth: 350,
-          maxWidth: 400,
           width: "100%",
+          maxWidth: 400,
           borderRadius: 3,
         }}
       >
