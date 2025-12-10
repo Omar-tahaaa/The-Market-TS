@@ -2,6 +2,10 @@
 
 A modern, responsive e-commerce application built with Next.js 16 (App Router), TypeScript, and Material UI. This project demonstrates a scalable architecture using Redux Toolkit for state management and MongoDB for user authentication.
 
+## 🚀 Live Demo
+
+**[View Live Application](https://the-market-ts.vercel.app/)**
+
 ## 🚀 Features
 
 - **User Authentication**: Secure Login and Registration system using JWT (via generic backend/Next.js API routes) and MongoDB.
